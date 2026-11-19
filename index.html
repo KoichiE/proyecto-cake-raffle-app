@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cake Raffle</title>
+
+    <!-- Connect CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <!-- Header -->
+        <header class="header">
+            <div class="cake-icon">🎂</div>
+            <h1>Cake Raffle</h1>
+            <p>Enter your name for a chance to win!</p>
+        </header>
+
+        <!-- Registration Card -->
+        <section class="registration-card">
+
+            <h2>Join the Raffle</h2>
+
+            <!-- Participant Registration Form -->
+            <form id="participantForm">
+
+                <input
+                    type="text"
+                    id="participantName"
+                    placeholder="Enter your full name"
+                    required
+                >
+
+                <button type="submit" class="add-button">
+                    + Add Participant
+                </button>
+
+            </form>
+
+            <!-- Participant Counter -->
+            <div class="participant-info">
+                <h3>Participants</h3>
+                <span id="participantCount">0 registered</span>
+            </div>
+
+            <!-- Participant List -->
+            <ul id="participantList">
+            </ul>
+
+            <!-- Raffle Buttons -->
+            <div class="draw-section">
+
+                <button type="button" id="drawButton" class="draw-button">
+                    🎉 Draw Winner
+                </button>
+
+                <button type="button" id="resetButton" class="reset-button">
+                    Reset Raffle
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- Winner Announcement -->
+        <section id="winnerSection" class="winner-section">
+
+            <div class="winner-icon">🏆</div>
+
+            <h2>And the winner is...</h2>
+
+            <p id="winnerName"></p>
+
+            <p class="winner-message">
+                Congratulations! Enjoy your cake!
+            </p>
+
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>Made with 🍰 and a little luck!</p>
+        </footer>
+
+    </main>
+
+    <!-- Connect JavaScript -->
+    <script src="actions.js"></script>
+
+</body>
+</html>

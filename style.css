@@ -1,0 +1,211 @@
+
+/* General page styling */
+* {
+    box-sizing: border-box; /* Includes padding and borders in dimensions */
+}
+
+body {
+    margin: 0; /* Removes default margin */
+    padding: 30px 15px; /* Adds space around the page */
+    font-family: Arial, sans-serif; /* Sets the font */
+    background: linear-gradient(135deg, #fff1dc, #f8d7c0); /* Creates warm background */
+    color: #49352b; /* Sets main text color */
+    min-height: 100vh; /* Fills the screen height */
+}
+
+/* Main application container */
+.container {
+    max-width: 650px; /* Limits container width */
+    margin: 20px auto; /* Centers the container */
+    text-align: center; /* Centers text */
+}
+
+/* Header */
+.header {
+    margin-bottom: 30px; /* Adds space below header */
+}
+
+.cake-icon {
+    font-size: 55px; /* Enlarges cake icon */
+    margin-bottom: 10px; /* Adds space below icon */
+}
+
+.header h1 {
+    font-size: 42px; /* Sets title size */
+    color: #9b4b32; /* Sets title color */
+    margin: 0; /* Removes default margin */
+}
+
+.header p {
+    font-size: 17px; /* Sets subtitle size */
+    color: #80685b; /* Sets subtitle color */
+}
+
+/* Registration card */
+.registration-card {
+    background-color: #ffffff; /* Creates white card */
+    padding: 30px; /* Adds internal spacing */
+    border-radius: 20px; /* Rounds card corners */
+    box-shadow: 0 8px 25px rgba(90, 50, 30, 0.12); /* Adds shadow */
+}
+
+.registration-card h2 {
+    color: #9b4b32; /* Sets heading color */
+    margin-top: 0; /* Removes top margin */
+}
+
+/* Registration form */
+form {
+    display: flex; /* Places input and button in a row */
+    gap: 10px; /* Adds space between elements */
+    margin-bottom: 30px; /* Adds space below form */
+}
+
+input {
+    flex: 1; /* Uses available space */
+    min-width: 0; /* Prevents overflow */
+    padding: 14px; /* Adds internal spacing */
+    border: 1px solid #e2c8b8; /* Adds border */
+    border-radius: 10px; /* Rounds input corners */
+    font-size: 15px; /* Sets text size */
+    outline: none; /* Removes default outline */
+}
+
+input:focus {
+    border-color: #c47756; /* Highlights selected input */
+}
+
+/* General buttons */
+button {
+    border: none; /* Removes default border */
+    border-radius: 10px; /* Rounds button corners */
+    padding: 14px 18px; /* Adds internal spacing */
+    font-size: 14px; /* Sets text size */
+    font-weight: bold; /* Makes text bold */
+    cursor: pointer; /* Shows pointer on hover */
+    transition: 0.2s ease; /* Smooths hover effects */
+}
+
+button:hover {
+    transform: translateY(-2px); /* Lifts button slightly */
+}
+
+/* Add participant button */
+.add-button {
+    background-color: #bd704e; /* Sets button background */
+    color: white; /* Sets text color */
+}
+
+/* Participant information */
+.participant-info {
+    display: flex; /* Places heading and counter in a row */
+    justify-content: space-between; /* Separates the elements */
+    align-items: center; /* Aligns elements vertically */
+    border-bottom: 1px solid #eee0d7; /* Adds divider */
+    padding-bottom: 12px; /* Adds space below content */
+}
+
+.participant-info h3 {
+    margin: 0; /* Removes default margin */
+    color: #624437; /* Sets heading color */
+}
+
+#participantCount {
+    color: #a16b50; /* Sets counter color */
+    font-size: 13px; /* Sets counter size */
+}
+
+/* Participant list */
+#participantList {
+    list-style: none; /* Removes bullet points */
+    padding: 0; /* Removes default padding */
+    margin: 15px 0 25px; /* Adds spacing */
+    text-align: left; /* Aligns names left */
+}
+
+#participantList li {
+    background-color: #fff7f0; /* Adds light background */
+    padding: 12px 15px; /* Adds internal spacing */
+    margin-bottom: 8px; /* Separates participant rows */
+    border-radius: 8px; /* Rounds row corners */
+    color: #624437; /* Sets text color */
+}
+
+/* Draw and reset buttons */
+.draw-section {
+    display: flex; /* Places buttons side by side */
+    gap: 10px; /* Adds space between buttons */
+}
+
+.draw-button {
+    flex: 1; /* Expands draw button */
+    background-color: #d89b3c; /* Sets gold background */
+    color: white; /* Sets text color */
+    font-size: 16px; /* Enlarges button text */
+}
+
+/* Reset button */
+.reset-button {
+    background-color: #007bff; /* Sets required blue background */
+    color: white; /* Makes text white */
+}
+
+.reset-button:hover {
+    background-color: #1367c0; /* Sets required hover background */
+}
+
+/* Winner announcement */
+.winner-section {
+    display: none; /* Hides winner section initially */
+    background-color: #fffdf6; /* Creates light background */
+    padding: 25px; /* Adds internal spacing */
+    margin-top: 25px; /* Adds space above section */
+    border: 2px solid #e6bd6b; /* Adds gold border */
+    border-radius: 18px; /* Rounds card corners */
+}
+
+.winner-icon {
+    font-size: 45px; /* Enlarges trophy */
+}
+
+.winner-section h2 {
+    color: #9b4b32; /* Sets heading color */
+}
+
+#winnerName {
+    color: #c27a24; /* Highlights winner name */
+    font-size: 28px; /* Enlarges winner name */
+    font-weight: bold; /* Makes name bold */
+    margin: 15px 0; /* Adds vertical spacing */
+}
+
+.winner-message {
+    color: #80685b; /* Sets message color */
+}
+
+/* Footer */
+footer {
+    margin-top: 25px; /* Adds space above footer */
+    color: #947b6d; /* Sets footer color */
+    font-size: 13px; /* Sets footer text size */
+}
+
+/* Mobile layout */
+@media (max-width: 550px) {
+
+    .header h1 {
+        font-size: 34px; /* Reduces title size */
+    }
+
+    .registration-card {
+        padding: 20px; /* Reduces card padding */
+    }
+
+    form {
+        flex-direction: column; /* Stacks form elements */
+    }
+
+    .draw-section {
+        flex-direction: column; /* Stacks raffle buttons */
+    }
+}
